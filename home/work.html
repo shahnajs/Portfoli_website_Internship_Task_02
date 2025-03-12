@@ -4,20 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John - Creative Technologist</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="bg-white font-sans">
-    <!-- Navigation -->
-    <nav class="container mx-auto px-6 py-6">
-        <div class="flex justify-end">
-            <ul class="flex space-x-8">
-                <li><a href="" class="font-medium text-gray-900 hover:text-red-500">Works</a></li>
-                <li><a href="blogs.html" class="font-medium text-gray-900 hover:text-red-500">Blog</a></li>
-                <li><a href="contact.html" class="font-medium text-gray-900 hover:text-red-500">Contact</a></li>
+    <div x-data="{ open: false }" class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="text-blue-500 font-bold text-xl">Portfolio</div>
+            <button @click="open = !open" class="lg:hidden text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="hidden lg:flex">
+                <ul class="lg:flex space-x-4">
+                    <li><a class="text-blue-500" href="home.html">Home</a></li>
+                    <li><a class="text-blue-500" href="work.html">Works</a></li>
+                    <li><a class="text-blue-500" href="blogs.html">Blogs</a></li>
+                    <li><a class="text-blue-500" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div x-show="open" class="lg:hidden">
+            <ul class="bg-white p-4">
+                <li><a class="text-blue-500" href="home.html">Home</a></li>
+                <li><a class="text-blue-500" href="work.html">Works</a></li>
+                <li><a class="text-blue-500" href="blogs.html">Blogs</a></li>
+                <li><a class="text-blue-500" href="contact.html">Contact</a></li>
             </ul>
         </div>
-    </nav>
+    </div>
+
+
+
+
+    
     <!-- Featured Works Section -->
     <section class="container mx-auto px-6 py-12">
         <h1 class="text-xl font-medium mb-8">Works</h1>

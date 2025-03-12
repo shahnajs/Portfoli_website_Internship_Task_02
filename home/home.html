@@ -4,24 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John - Creative Technologist</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="bg-white font-sans">
-    <!-- Navigation -->
-    <nav class="container mx-auto px-6 py-6">
-        <div class="flex justify-end">
-            <ul class="flex space-x-8">
-                <li><a href="work.html" class="font-medium text-gray-900 hover:text-red-500">Works</a></li>
-                <li><a href="blogs.html" class="font-medium text-gray-900 hover:text-red-500">Blog</a></li>
-                <li><a href="contact.html" class="font-medium text-gray-900 hover:text-red-500">Contact</a></li>
+
+
+    
+    <div x-data="{ open: false }" class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="text-blue-500 font-bold text-xl">Portfolio</div>
+            <button @click="open = !open" class="lg:hidden text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="hidden lg:flex">
+                <ul class="lg:flex space-x-4">
+                    <li><a class="text-blue-500" href="home.html">Home</a></li>
+                    <li><a class="text-blue-500" href="work.html">Works</a></li>
+                    <li><a class="text-blue-500" href="blogs.html">Blogs</a></li>
+                    <li><a class="text-blue-500" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div x-show="open" class="lg:hidden">
+            <ul class="bg-white p-4">
+                <li><a class="text-blue-500" href="home.html">Home</a></li>
+                <li><a class="text-blue-500" href="work.html">Works</a></li>
+                <li><a class="text-blue-500" href="blogs.html">Blogs</a></li>
+                <li><a class="text-blue-500" href="contact.html">Contact</a></li>
             </ul>
         </div>
-    </nav>
+    </div>
 
     <!-- Hero Section -->
     <section class="container mx-auto px-6 py-12">
-        <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between">
             <div class="md:w-7/12">
                 <h1 class="text-4xl font-bold text-gray-900 mb-4">Hi, Mst. Shahnaj Akter Smrity<br>Creative Technologist</h1>
                 <p class="text-gray-700 mb-6">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
@@ -33,113 +54,7 @@
         </div>
     </section>
 
-    <!-- Skills Section with Dark Theme -->
-<section class="bg-gray-300 py-16 px-6">
-    <div class="container mx-auto">
-        <!-- Section Title -->
-        <h2 class="text-4xl font-bold text-white text-center mb-12">My Skills</h2>
-        
-        <!-- Divider Line -->
-        <div class="w-24 h-px bg-gray-600 mx-auto mb-16"></div>
-        
-        <!-- Skills Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 max-w-5xl mx-auto">
-            <!-- Left Column -->
-            <div class="space-y-10">
-                <!-- Photoshop -->
-                <div>
-                    <div class="flex justify-between mb-2">
-                        <span class="text-white text-lg">Photoshop</span>
-                        <span class="text-white text-lg">90%</span>
-                    </div>
-                    <div class="h-2 w-full bg-gray-700 rounded-full overflow-hidden">
-                        <div class="h-full bg-red-500 rounded-full" style="width: 90%"></div>
-                    </div>
-                </div>
-                
-                <!-- Illustrator -->
-                <div>
-                    <div class="flex justify-between mb-2">
-                        <span class="text-white text-lg">Illustrator</span>
-                        <span class="text-white text-lg">80%</span>
-                    </div>
-                    <div class="h-2 w-full bg-gray-700 rounded-full overflow-hidden">
-                        <div class="h-full bg-red-500 rounded-full" style="width: 80%"></div>
-                    </div>
-                </div>
-                
-                <!-- Figma -->
-                <div>
-                    <div class="flex justify-between mb-2">
-                        <span class="text-white text-lg">Figma</span>
-                        <span class="text-white text-lg">75%</span>
-                    </div>
-                    <div class="h-2 w-full bg-gray-700 rounded-full overflow-hidden">
-                        <div class="h-full bg-red-500 rounded-full" style="width: 75%"></div>
-                    </div>
-                </div>
-                
-                <!-- Adobe XD -->
-                <div>
-                    <div class="flex justify-between mb-2">
-                        <span class="text-white text-lg">Adobe XD</span>
-                        <span class="text-white text-lg">95%</span>
-                    </div>
-                    <div class="h-2 w-full bg-gray-700 rounded-full overflow-hidden">
-                        <div class="h-full bg-red-500 rounded-full" style="width: 95%"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Right Column -->
-            <div class="space-y-10">
-                <!-- HTML5 CSS3 -->
-                <div>
-                    <div class="flex justify-between mb-2">
-                        <span class="text-white text-lg">HTML5 CSS3</span>
-                        <span class="text-white text-lg">90%</span>
-                    </div>
-                    <div class="h-2 w-full bg-gray-700 rounded-full overflow-hidden">
-                        <div class="h-full bg-red-500 rounded-full" style="width: 90%"></div>
-                    </div>
-                </div>
-                
-                <!-- Javascript -->
-                <div>
-                    <div class="flex justify-between mb-2">
-                        <span class="text-white text-lg">Javascript</span>
-                        <span class="text-white text-lg">80%</span>
-                    </div>
-                    <div class="h-2 w-full bg-gray-700 rounded-full overflow-hidden">
-                        <div class="h-full bg-red-500 rounded-full" style="width: 80%"></div>
-                    </div>
-                </div>
-                
-                <!-- React -->
-                <div>
-                    <div class="flex justify-between mb-2">
-                        <span class="text-white text-lg">React</span>
-                        <span class="text-white text-lg">75%</span>
-                    </div>
-                    <div class="h-2 w-full bg-gray-700 rounded-full overflow-hidden">
-                        <div class="h-full bg-red-500 rounded-full" style="width: 75%"></div>
-                    </div>
-                </div>
-                
-                <!-- jQuery -->
-                <div>
-                    <div class="flex justify-between mb-2">
-                        <span class="text-white text-lg">jQuery</span>
-                        <span class="text-white text-lg">85%</span>
-                    </div>
-                    <div class="h-2 w-full bg-gray-700 rounded-full overflow-hidden">
-                        <div class="h-full bg-red-500 rounded-full" style="width: 85%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
     <!-- Recent Posts Section -->
     <section class="bg-blue-50 py-8">
