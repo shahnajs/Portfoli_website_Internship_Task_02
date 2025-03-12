@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John - Creative Technologist</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-white font-sans">
+
+
+    
+    <div x-data="{ open: false }" class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="text-blue-500 font-bold text-xl">Portfolio</div>
+            <button @click="open = !open" class="lg:hidden text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="hidden lg:flex">
+                <ul class="lg:flex space-x-4">
+                    <li><a class="text-blue-500" href="home.html">Home</a></li>
+                    <li><a class="text-blue-500" href="work.html">Works</a></li>
+                    <li><a class="text-blue-500" href="blogs.html">Blogs</a></li>
+                    <li><a class="text-blue-500" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div x-show="open" class="lg:hidden">
+            <ul class="bg-white p-4">
+                <li><a class="text-blue-500" href="home.html">Home</a></li>
+                <li><a class="text-blue-500" href="work.html">Works</a></li>
+                <li><a class="text-blue-500" href="blogs.html">Blogs</a></li>
+                <li><a class="text-blue-500" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-12">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between">
+            <div class="md:w-7/12">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Hi, Mst. Shahnaj Akter Smrity<br>Creative Technologist</h1>
+                <p class="text-gray-700 mb-6">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                <button class="bg-red-400 hover:bg-red-500 text-white font-medium py-2 px-4 rounded">Download Resume</button>
+            </div>
+            <div class="md:w-5/12 mt-8 md:mt-0 flex justify-center">
+                <img src="/asset/images/WhatsApp Image 2025-01-22 at 23.00.21_3e40415a.jpg" alt="John's profile" class="rounded-full w-60 h-60 object-cover">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Recent Posts Section -->
+    <section class="bg-blue-50 py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-medium">Recent posts</h2>
+                <a href="#" class="text-blue-500 hover:underline">View all</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Post 1 -->
+                <div class="bg-white p-6 rounded">
+                    <h3 class="text-xl font-bold mb-2">Making a design system from scratch</h3>
+                    <div class="flex text-gray-600 mb-2">
+                        <span>12 Feb 2020</span>
+                        <span class="mx-2">|</span>
+                        <span>Design, Pattern</span>
+                    </div>
+                    <p class="text-gray-700">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+                <!-- Post 2 -->
+                <div class="bg-white p-6 rounded">
+                    <h3 class="text-xl font-bold mb-2">Creating pixel perfect icons in Figma</h3>
+                    <div class="flex text-gray-600 mb-2">
+                        <span>12 Feb 2020</span>
+                        <span class="mx-2">|</span>
+                        <span>Figma, Icon Design</span>
+                    </div>
+                    <p class="text-gray-700">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Works Section -->
+    <section class="container mx-auto px-6 py-12">
+        <h2 class="text-xl font-medium mb-8">Featured works</h2>
+        
+        <!-- Work Item 1 -->
+        <div class="border-b pb-8 mb-8">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/4 mb-4 md:mb-0">
+                    <img src="/asset/images/sample3.jpg" alt="Dashboard Design" class="rounded">
+                </div>
+                <div class="md:w-3/4 md:pl-8">
+                    <h3 class="text-2xl font-bold mb-2">Designing Dashboards</h3>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-blue-900 text-white text-sm font-medium rounded-full px-3 py-1">2020</span>
+                        <span class="ml-4 text-gray-500">Dashboard</span>
+                    </div>
+                    <p class="text-gray-700">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Work Item 2 -->
+        <div class="border-b pb-8 mb-8">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/4 mb-4 md:mb-0">
+                    <img src="/asset/images/sample2.jpg" alt="Vibrant Portraits" class="rounded">
+                </div>
+                <div class="md:w-3/4 md:pl-8">
+                    <h3 class="text-2xl font-bold mb-2">Vibrant Portraits of 2020</h3>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-blue-900 text-white text-sm font-medium rounded-full px-3 py-1">2018</span>
+                        <span class="ml-4 text-gray-500">Illustration</span>
+                    </div>
+                    <p class="text-gray-700">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Work Item 3 -->
+        <div class="border-b pb-8 mb-8">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/4 mb-4 md:mb-0">
+                    <img src="/asset/images/sample.jpg" alt="Malayalam Type" class="rounded">
+                </div>
+                <div class="md:w-3/4 md:pl-8">
+                    <h3 class="text-2xl font-bold mb-2">36 Days of Malayalam type</h3>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-blue-900 text-white text-sm font-medium rounded-full px-3 py-1">2018</span>
+                        <span class="ml-4 text-gray-500">Typography</span>
+                    </div>
+                    <p class="text-gray-700">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-12 text-center">
+        <div class="flex justify-center space-x-8 mb-6">
+            <a href="#" class="text-gray-700 hover:text-blue-600">
+                <i class="fab fa-facebook-f text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-700 hover:text-pink-600">
+                <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-700 hover:text-blue-400">
+                <i class="fab fa-twitter text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-700 hover:text-blue-800">
+                <i class="fab fa-linkedin-in text-2xl"></i>
+            </a>
+        </div>
+        <p class="text-gray-600">Copyright ©2020 All rights reserved</p>
+    </footer>
+</body>
+</html>
